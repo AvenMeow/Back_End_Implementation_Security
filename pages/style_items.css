@@ -1,0 +1,40 @@
+#containerProduct{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: auto;
+}
+  
+  .cardProduct{
+    max-width: 400px;
+    text-align: center;
+    background-color: var(--color-acento-claro);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: 200ms;
+  }
+  
+  .cardProduct:hover{
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    translate: 0px -5px;
+  }
+  
+  .cardProduct img{
+    max-width:100%;
+    aspect-ratio: 1.5;
+  }
+  
+  .price{
+    font-weight: 600;
+  }
+  
+  .cardProduct button{
+    font-size: larger;
+    background-color: var(--color-acento);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    border:unset;
+    cursor:pointer;
+  }

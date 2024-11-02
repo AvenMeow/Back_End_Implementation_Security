@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <link rel="stylesheet" href="style_items.css">
+    <script defer src="cartService.js"></script> <!-- Enlaza el archivo JavaScript para interactividad -->
+    <script src="items.js"></script>
+    <script defer src="index.js"></script>
+    <title>HappyCart - Inicio</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-layout">
+            <a href="Index.html" id="Logo">
+                <img src="./img/logo.png">
+            </a>
+            <h1>HappyCart: fill your cart, fill your day</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Items.html">All our products</a></li>
+                <li><a href="Cart.html" id="cartIcon"><img src="./img/shopping-cart.png" alt="Shopping Cart Icon"><span id="counter">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Página de Inicio -->
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section class="foreword">
+            <div class="foreword-layout">
+                <h2>¡Bienvenidos!</h2>
+                <p>Descubre productos increíbles y llena tu carrito de la felicidad con nuestras ofertas más alegres</p>
+                <a href="Items.html" class="cta-button">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección de Destacados -->
+        <section class="features">
+            <section id>
+                <h2>Productos Destacados</h2>
+            </section>
+        </section>
+
+        <section id="containerProduct"></section>
+
+        <!-- Sección de Boletín -->
+        <section class="newsletter">
+            <h2>Suscríbete a Nuestro Boletín</h2>
+            <p>Recibe las últimas novedades y ofertas exclusivas directamente en tu correo.</p>
+            <form>
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 HappyCart. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100087617270742"><img src="./img/facebook.png"></a>
+            <a href="#"><img src="./img/x.png"></a>
+            <a href="https://www.threads.net/@my26maicol?xmt=AQGzttFlD7j3MRIhze0mOmGUQfZ_5J-pPxDCXUt5W7pHtQQ"><img src="./img/instagram.png"></a>
+        </div>
+    </footer>
+</body>
+</html>
