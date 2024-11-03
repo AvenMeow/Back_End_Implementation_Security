@@ -1,5 +1,5 @@
 {
-  "name": "webserver",
+  "name": "back_end_implementation_security",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -15,8 +15,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "pg": "^8.13.1",
-    "promise-mysql": "^5.2.0"
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
