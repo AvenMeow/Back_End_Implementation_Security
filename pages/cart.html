@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo CSS para estilos -->
-    <link rel="stylesheet" href="style_cart.css">
-    <script defer src="cartService.js"></script> <!-- Enlaza el archivo JavaScript para interactividad -->
-    <script src="items.js"></script>
-    <script defer src="index.js"></script>
-    <title>HappyCart - Carrito</title>
+    <link rel="stylesheet" href="css/cart.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <script src="js/cartHost.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/cartService.js"></script> <!-- Enlaza el archivo JavaScript para interactividad -->
+    <title>HappyCart - Tu Carrito</title>
 </head>
 <body>
     <!-- Encabezado -->
@@ -31,12 +30,17 @@
     <!-- Página del Carrito -->
     <main>
 		<p id="emptyCart">Ups! El carrito está vacío, <a href="items.html">elige algunos de nuestros productos</a></p>
-		<section id="containerCart"></section>
+		<section id="containerProduct"></section>
         <section id="total">
-            <p>Total unidades: <span id="quantity">0</span></p>
-            <p>Total precio: $<span id="price">0</span></p>
-            <button disabled>Comprar</button>
-            <button id="reboot">Reiniciar</button>
+            <p>Unidades totales: <span id="quantity">0</span></p>
+            <p>Precio total: $<span id="price">0</span></p>
+            <button onclick="confirmarCompra()">¡Comprar!</button>
+
+            <script>
+            function confirmarCompra() {
+                alert("Compra confirmada");
+            }
+            </script>
         </section>
     </main>
 

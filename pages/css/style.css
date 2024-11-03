@@ -1,0 +1,289 @@
+/* Estilos generales */
+:root {
+    --color-acento: #218729;
+    --color-acento-claro: #ffeeaa;
+    --color-texto: #333;
+    --color-fondo: #fff;
+    --color-encabezado: #2c7bc3;
+    --color-boton: #a72828;
+    --color-boton-hover: #218737;
+    --color-enlace-hover: #5ea2ee;
+    --color-cantidad: #ff0000;
+    --color-boton-cta: #ffd700;
+    --color-boton-cta-hover: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body { /* Texto de Cuerpo */
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Encabezado */
+header { /* Texto de Encabezado */
+    background-color: var(--color-acento-claro);
+    color: var(--color-encabezado);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header-layout { /* Panel de Encabezado */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ffc000;
+}
+
+#Logo img { /* Imagen de Encabezado */
+    height: 50px;
+}
+
+.header h1 { /* Título de Encabezado */
+    font-size: 1.5rem;
+    margin-left: 15px;
+    animation: slideIn 0.5s ease-out;
+}
+
+nav ul { /* Barra de Menú */
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+nav ul li a { /* Opciones de Menú */
+    text-decoration: none;
+    color: var(--color-enlace-hover);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, se añade un subrayado al texto */
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease-in;
+}
+
+#cartIcon img { /* Estilos para la imagen del carrito */
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+
+#counter { /* Estilos para el contador de productos del carrito */
+    background-color: var(--color-cantidad);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: 95px;
+    right: 8px;
+}
+
+/* Sección de Bienvenida */
+.foreword { /* Entrada */
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.foreword-layout h2 { /* Título de Entrada */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.85);
+    animation: slideIn 0.7s ease-out;
+}
+
+.foreword-layout p { /* Párrafo de Entrada */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.85);
+    animation: slideIn 0.9s ease-out;
+}
+
+.cta-button { /* Botón de Compras */
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: bounceIn 1.2s ease-out;
+}
+
+.cta-button:hover {
+    background-color: var(--color-boton-cta-hover);
+    color: #000;
+}
+
+/* Sección de Destacados */
+.features { /* Destacados Index */
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.features1 { /* Destacados Items */
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.features h2 { /* Título de Destacados Index */
+    font-size: 2rem;
+    margin-bottom: -25px;
+    animation: slideIn 1s ease-out;
+}
+
+.features1 h2 { /* Título de Destacados Items */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+/* Boletín */
+.newsletter { /* Boletín */
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.newsletter h2 { /* Título de Boletín */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.newsletter p { /* Párrafo de Boletín */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.newsletter form { /* Panel de Boletín */
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter input[type="email"] { /* Email de Boletín */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.newsletter button { /* Botón de Suscripción */
+    padding: 10px;
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: bounceIn 1.5s ease-out;
+}
+
+.newsletter button:hover {
+    background-color: var(--color-boton-hover);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Footer */
+footer { /* Pie de Página */
+    padding: 20px;
+    background-color: var(--color-acento-claro);
+    color: var(--color-encabezado);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.social-media { /* Red Social */
+    margin-top: 10px;
+}
+
+.social-media img { /* Imagen de Red Social */
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.social-media img:hover {
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); }
+    to { transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: ease-in-out;
+        transform: translateY(0);
+    }
+    20% { transform: translateY(-10px); }
+    40% { transform: translateY(5px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .features-list {
+        flex-direction: column;
+    }
+
+    .features-item {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .features-item {
+        width: 100%;
+    }
+}
