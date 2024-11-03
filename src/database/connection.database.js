@@ -9,7 +9,7 @@ const db = new Pool({ // Configuración de conexión de la base de datos
 });
 
 try { // Verificar si la conexión a la base de datos está activa y funcionando
-    await connection.query('SELECT NOW()')
+    await db.query('SELECT NOW()')
     console.log('Connecting to the database... OK!')
 } catch (error) {
     console.log('Connecting to the database... ERROR!')
