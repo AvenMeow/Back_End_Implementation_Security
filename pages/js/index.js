@@ -8,10 +8,10 @@ function crearTarjetasProductosInicio(productos){
   productosAleatorios.forEach(producto=> {
     const nuevoItem = document.createElement("div");
     nuevoItem.classList = "cardProduct";
-    nuevoItem.innerHTML = `<img src="img/productos/${producto.id}.jpeg">
-      <h3>${producto.nombre}</h3>
-      <p class="precio">$${producto.precio}</p>
-      <button>Agregar al carrito</button>`;
+    nuevoItem.innerHTML = `<img src="img/productos/${producto.pid}.jpeg">
+    <h3>${producto.name}</h3>
+    <p class="precio">$${producto.price}</p>
+    <button>Agregar al carrito</button>`;
 
     contenedorTarjetas.appendChild(nuevoItem);
 
@@ -19,6 +19,7 @@ function crearTarjetasProductosInicio(productos){
   });
 }
 
-getItems().then(items=> {
+/* Recibe la lista de productos y luego muestra esos productos en la interfaz de usuario */
+getProducts().then(items=> {
   crearTarjetasProductosInicio(items);
 })

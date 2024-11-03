@@ -13,12 +13,12 @@ function crearTarjetasProductosInicio(){
     productos.forEach(producto => {
       const nuevoItem = document.createElement("div");
       nuevoItem.classList = "cardProduct";
-      nuevoItem.innerHTML = `<img src="img/productos/${producto.id}.jpeg">
-      <h3 class="product-name">${producto.nombre}</h3>
-      <p class="product-price">$${producto.precio}</p>
+      nuevoItem.innerHTML = `<img src="img/productos/${producto.pid}.jpeg">
+      <h3 class="product-name">${producto.name}</h3>
+      <p class="product-price">$${producto.price}</p>
       <div class="quantity-controls">
        <button class="decrement-btn">-</button>
-       <span class="product-quantity">${producto.cantidad}</span>
+       <span class="product-quantity">${producto.quantity}</span>
        <button class="increment-btn">+</button>
       </div>`;
       contenedorTarjetas.appendChild(nuevoItem);
@@ -47,8 +47,8 @@ function actualizarTotales(){
   let precio = 0;
   if (productos && productos.length > 0){
     productos.forEach(producto => {
-      unidades += producto.cantidad;
-      precio += producto.precio * producto.cantidad;
+      unidades += producto.quantity;
+      precio += producto.price * producto.quantity;
     });
     unidadesElementos.innerText = unidades;
     precioElementos.innerText = precio;

@@ -13,12 +13,11 @@ app.listen(port, ()=> // Configuración de comunicación del puerto
 //middlewares
 app.use(morgan('dev')) // Detalles de solicitudes del script "dev"
 app.use(cors({
-    origin: 'http://localhost:5500' /* Cambia el puerto según donde esté corriendo tu frontend */
+    origin: 'http://127.0.0.1:5500' /* Cambia el puerto según donde esté corriendo tu frontend */
 })) 
 
 //routes
 app.get('/products', async(req, res)=> { // Configuración de ruta y respuesta del API con la base de datos
     const result = await db.query('SELECT * FROM products')
-    console.log(result.rows) // Muestra resultados por consola
-    res.json('THE GUN') // Envía resultados como respuesta JSON
+    res.json(result.rows) // Envía los datos de la base de datos como JSON
 })

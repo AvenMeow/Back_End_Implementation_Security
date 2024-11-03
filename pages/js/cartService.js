@@ -11,7 +11,7 @@ function agregarAlCarrito(producto){
     conteo = 1;
   } else {
     //Si hay localStorage, fijarse si el artículo ya está ahí
-    const productoIndice = memoria.findIndex(item => item.id === producto.id);
+    const productoIndice = memoria.findIndex(item => item.pid === producto.pid);
     console.log(productoIndice);
     const memoriaNueva = memoria;
     //Si el producto no está en el carrito, se agrega
@@ -20,8 +20,8 @@ function agregarAlCarrito(producto){
       conteo = 1;
     } else {
       //Si el producto está en el carrito, 1 a la cantidad
-      memoriaNueva[productoIndice].cantidad++;
-      conteo = memoriaNueva[productoIndice].cantidad;
+      memoriaNueva[productoIndice].quantity++;
+      conteo = memoriaNueva[productoIndice].quantity;
     }
     localStorage.setItem("items",JSON.stringify(memoriaNueva));
   }
@@ -32,11 +32,11 @@ function agregarAlCarrito(producto){
 /* Resta una unidad de un producto del carrito */
 function restarAlCarrito(producto){
   const memoria = JSON.parse(localStorage.getItem("items"));
-  const productoIndice = memoria.findIndex(item => item.id === producto.id);
-  if (memoria[productoIndice].cantidad === 1){
+  const productoIndice = memoria.findIndex(item => item.pid === producto.pid);
+  if (memoria[productoIndice].quantity === 1){
     memoria.splice(productoIndice, 1);
   } else {
-    memoria[productoIndice].cantidad--;
+    memoria[productoIndice].quantity--;
   }
   localStorage.setItem("items",JSON.stringify(memoria));
   actualizarConteoCarrito();
@@ -45,7 +45,7 @@ function restarAlCarrito(producto){
 /* Agrega cantidad a un producto */
 function getNuevoProductoParaMemoria(producto){
   const productoNuevo = producto;
-  productoNuevo.cantidad = 1;
+  productoNuevo.quantity = 1;
   return productoNuevo;
 }
 
@@ -54,7 +54,7 @@ const contadorCarritoElementos = document.getElementById("counter");
 function actualizarConteoCarrito(){
   const memoria = JSON.parse(localStorage.getItem("items"));
   if (memoria && memoria.length > 0){
-    const contador = memoria.reduce((acum, current)=> acum+current.cantidad, 0);
+    const contador = memoria.reduce((acum, current)=> acum+current.quantity, 0);
     contadorCarritoElementos.innerText = contador;
     console.log(contador);
   } else {
