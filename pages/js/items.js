@@ -17,7 +17,7 @@ function crearTarjetasProductosInicio(productos){
   });
 }
 
-/* Recibe la lista de productos y luego muestra esos productos en la interfaz de usuario */
-getProducts().then(items=> {
+/* P3. back-end data in front-end */
+getProducts().then(items=> { //Recibe la lista de productos y luego muestra esos productos en la interfaz de usuario
   crearTarjetasProductosInicio(items);
 })

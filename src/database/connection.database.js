@@ -1,11 +1,11 @@
 import pg from 'pg' // Interacción con bases de datos PostgreSQL
-import 'dotenv/config' // Gestión de configuraciones sensibles, como contraseñas o credenciales
+import 'dotenv/config' // Gestión de configuraciones sensibles
 
-const {Pool} = pg // Instancia del framework PG
-
+/* P2. database connection */
+const {Pool} = pg // Instancia del framework Postgre
 const db = new Pool({ // Configuración de conexión de la base de datos
     allowExitOnIdle: true,
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.DATABASE_URL // .env
 });
 
 try { // Verificar si la conexión a la base de datos está activa y funcionando

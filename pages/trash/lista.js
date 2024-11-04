@@ -1,4 +1,4 @@
-/* Esta lista podría ser reemplazada por la respuesta de un backend */
+/* Esta lista podría ser reemplazada por la respuesta de un back-end */
 const items = [
     {
         pid: 1,

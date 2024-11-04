@@ -216,6 +216,7 @@ footer { /* Pie de Página */
     color: var(--color-encabezado);
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    margin-top: auto;
 }
 
 .social-media { /* Red Social */

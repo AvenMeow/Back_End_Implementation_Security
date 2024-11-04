@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cart.css"> <!-- Enlaza el archivo CSS para estilos -->
-    <script src="js/cartHost.js"></script>
+    <script src="js/cartProducts.js"></script> <!-- Enlaza el archivo JavaScript para back-end -->
     <script defer src="js/cart.js"></script>
     <script defer src="js/cartService.js"></script> <!-- Enlaza el archivo JavaScript para interactividad -->
     <title>HappyCart - Tu Carrito</title>
@@ -29,18 +29,13 @@
 
     <!-- Página del Carrito -->
     <main>
-		<p id="emptyCart">Ups! El carrito está vacío, <a href="items.html">elige algunos de nuestros productos</a></p>
+		<p id="emptyCart" class="hidden">Ups! El carrito está vacío, <a href="items.html">elige algunos de nuestros productos</a></p>
 		<section id="containerProduct"></section>
         <section id="total">
             <p>Unidades totales: <span id="quantity">0</span></p>
             <p>Precio total: $<span id="price">0</span></p>
-            <button onclick="confirmarCompra()">¡Comprar!</button>
-
-            <script>
-            function confirmarCompra() {
-                alert("Compra confirmada");
-            }
-            </script>
+            <button id="fullCart">¡Comprar!</button>
+            <button id="reboot">¡Borrar!</button>
         </section>
     </main>
 
@@ -55,4 +50,3 @@
     </footer>
 </body>
 </html>
-
