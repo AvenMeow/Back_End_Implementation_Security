@@ -20,6 +20,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Cuerpo */
 body { /* Texto de Cuerpo */
   line-height: 1.6;
   background-color: var(--color-fondo);
@@ -78,13 +79,15 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   transition: text-decoration 0.3s ease-in;
 }
 
-#cartIcon img { /* Estilos para la imagen del carrito */
+/* Estilos para la imagen del carrito */
+#cartIcon img {
   width: 20px;
   height: 20px;
   margin-right: 3px;
 }
 
-#counter { /* Estilos para el contador de productos del carrito */
+/* Estilos para el contador de productos del carrito */
+#counter {
   background-color: var(--color-cantidad);
   color: white;
   font-size: 10px;
@@ -96,6 +99,7 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   right: 8px;
 }
 
+/* Estilos para el contenedor de productos del carrito */
 #containerProduct{
     max-width: 500px;
     margin: auto;
@@ -116,6 +120,7 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   .cardProduct h3{
     width: 130px;
   }
+
   .cardProduct div{
     background-color: var(--color-acento-claro);
     padding: 3px;
@@ -126,17 +131,18 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
     text-align: center;
   }
 
-.hidden {
+  .hidden {
     display: none;
-}
+  }
 
-.product-name { 
-  font-size: 1.2em; /* Nombre del producto */
+/* Estilos para productos */
+.product-name { /* Nombre del Producto */
+  font-size: 1.2em;
   color: #333;
   margin-bottom: 8px;
 }
 
-.product-price { /* Precio del producto */
+.product-price { /* Precio del Producto */
   display: flex;
   font-size: 1.1em;
   color: #4CAF50;
@@ -146,7 +152,7 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   margin-bottom: 12px;
 }
 
-.quantity-controls { /* Controles de cantidad */
+.quantity-controls { /* Controles de Cantidad del Producto */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,7 +160,7 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   margin-bottom: 12px;
 }
 
-.decrement-btn, .increment-btn { /* Botones para incrementar y decrementar cantidad */
+.decrement-btn, .increment-btn { /* Botones para Incrementar y Decrementar Cantidades */
   width: 30px;
   height: 30px;
   background-color: #f0f0f0;
@@ -169,14 +175,15 @@ nav ul li a:hover { /* Estilo: Cuando el usuario pasa el mouse sobre el enlace, 
   background-color: #e0e0e0;
 }
 
-.product-quantity { /* Cantidad del producto */
+.product-quantity { /* Cantidad del Producto */
   font-size: 1.1em;
   width: 24px;
   text-align: center;
   color: #555;
 }
 
-button#fullCart, button#reboot { /* Estilos para los botones Comprar y Borrar */
+/* Estilos para los botones Comprar y Borrar */
+button#fullCart, button#reboot {
   padding: 10px 20px;
   font-size: 1em;
   font-weight: bold;
